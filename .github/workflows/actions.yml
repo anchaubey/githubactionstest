@@ -21,6 +21,7 @@ jobs:
         run: |
           pwd
           ls -a
+          aws ecs run-task --cluster newcls --task-definition nginxtaskdef:1 --count 1 --launch-type FARGATE --network-configuration "awsvpcConfiguration={subnets=[subnet-0d5de275],securityGroups=[sg-08495eda3967b5855]}"
       - name: Simle JS Action
         id: greet
         uses: actions/hello-world-javascript-action@v1
