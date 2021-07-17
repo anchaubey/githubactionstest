@@ -11,6 +11,7 @@ jobs:
         run: |
           pwd
           ls
+          whoami
       - name: Simle JS Action
         id: greet
         uses: actions/hello-world-javascript-action@v1
